@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moeda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Tela de Boas-Vindas -->
+    <div id="tela-boas-vindas">
+        <h1>Bem-vindo ao Conversor de Moeda!</h1>
+    </div>
+
+    <!-- Conversor de Dólar para Real -->
+    <div id="conversor">
+        <div class="container">
+            <h2>Conversor de Dólar para Real</h2>
+            <input type="number" id="valorDolar" placeholder="Digite o valor em dólares">
+            <button onclick="converter()">Converter</button>
+            <p id="resultado"></p>
+        </div>
+
+        <!-- Informações sobre a cotação do dólar -->
+        <div id="info-cotacao">
+            <h3>📊 Informações sobre o Dólar</h3>
+            <p><strong>💰 Cotação Atual:</strong> R$ <span id="cotacaoValor">4.80</span></p>
+            <p>📅 Atualizado diariamente com base no mercado financeiro.</p>
+            <p>🌍 O dólar é uma das moedas mais importantes do mundo e influencia diversas economias.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
