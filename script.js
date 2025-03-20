@@ -51,7 +51,15 @@ async function converter() {
     }
 }
 
+// Adicionando créditos à API no documento HTML
 document.addEventListener("DOMContentLoaded", () => {
-    atualizarCotacao(); // Atualiza a cotação assim que a página carrega
-});
+    // Atualiza a cotação assim que a página carrega
+    atualizarCotacao(); 
 
+    // Créditos à API (inserindo um link de crédito no rodapé ou onde você preferir)
+    const creditos = document.createElement('footer');
+    creditos.innerHTML = `
+        <p>Dados fornecidos por <a href="https://economia.awesomeapi.com.br/" target="_blank">AwesomeAPI</a></p>
+    `;
+    document.body.appendChild(creditos); // Adiciona os créditos ao final do body
+});
