@@ -13,26 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000);
 });
 
-function converter() {
-    let cotacaoDolar = 4.80;
-    let valorDolar = document.getElementById("valorDolar").value;
-    let resultado = document.getElementById("resultado");
-    let infoCotacao = document.getElementById("info-cotacao");
-
-    if (valorDolar) {
-        let valorReais = (valorDolar * cotacaoDolar).toFixed(2);
-        resultado.textContent = `R$ ${valorReais}`;
-        
-        // Mostra a seção de informações com animação
-        infoCotacao.classList.add("visible");
-
-        // Rola suavemente até a seção de informações
-        infoCotacao.scrollIntoView({ behavior: "smooth" });
-    } else {
-        resultado.textContent = "Por favor, insira um valor válido.";
-    }
-}
-
 async function atualizarCotacao() {
     try {
         let resposta = await fetch("https://economia.awesomeapi.com.br/json/last/USD-BRL");
